@@ -1,6 +1,8 @@
+<!--xml-->
 <launch>
+    <!-- run the driver with hardware triggering enabled -->
     <node pkg="camera1394" type="camera1394_node" name="camera1394_node">
-        <param name="video_mode" value="640x480_mono8">
+        <param name="video_mode" value="640x480_mono8" />
         <param name="external_trigger" value="true" />
         <param name="software_trigger" value="false" />
         <param name="trigger_mode" value="mode_1" />
