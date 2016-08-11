@@ -6,12 +6,14 @@ and use the reset_on_open = false not to reset thecamera while opening it throug
 <launch>
     <!-- run the driver with hardware triggering enabled -->
     <node pkg="camera1394" type="camera1394_node" name="camera1394_node">
+				<param name="reset_on_open" value="false" />
+<!--
         <param name="video_mode" value="640x480_mono8" />
         <param name="external_trigger" value="true" />
         <param name="software_trigger" value="false" />
         <param name="trigger_mode" value="mode_1" />
         <param name="trigger_source" value="source_0" />
         <param name="trigger polarity" value="active_low" />
-				<param name="reset_on_open" value="false" />
+-->
     </node>
 </launch>
