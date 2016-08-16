@@ -1,0 +1,22 @@
+<!--xml-->
+<!-- for more details : http://wiki.ros.org/camera1394 -->
+<!-- some features enabled by point grey may not be available from ROS camera134 configuration.
+One way to try is to set the camera with FlyCapture software (provided by Point Grey)
+and use the reset_on_open = false not to reset thecamera while opening it through ROS -->
+<launch>
+    <!-- run the driver with hardware triggering enabled -->
+    <node pkg="camera1394" type="camera1394_node" name="camera1394_node"> 
+<!--				<param name="reset_on_open" value="false" /> -->
+
+        <param name="video_mode" value="640x480_mono8" />
+        <param name="external_trigger" value="true" />
+        <param name="software_trigger" value="true" />
+        <param name="trigger_mode" value="mode_1" />
+        <param name="trigger_source" value="source_0" />
+        <param name="trigger polarity" value="active_low" />
+    </node>
+
+
+</launch>
+
+
